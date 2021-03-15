@@ -1,6 +1,6 @@
 pipeline {
 environment{
-image
+imageName
 }
   agent any
   stages 
@@ -30,7 +30,7 @@ image
     stage('Push Docker Image'){
         steps{
         script{
-        image.push()
+        imageName.push()
         }
         }
         }
