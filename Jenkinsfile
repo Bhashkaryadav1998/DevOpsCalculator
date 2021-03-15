@@ -7,17 +7,7 @@ imageName=0
     {
     stage('Clean') {
       steps {
-        sh 'mvn clean'
-      }
-    }
-    stage('Compile') {
-      steps {
-        sh 'mvn compile'
-      }
-    }
-    stage('Test') {
-      steps {
-        sh 'mvn test'
+        sh 'mvn clean install'
       }
     }
     stage('Docker build to Image'){
