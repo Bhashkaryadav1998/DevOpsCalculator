@@ -5,11 +5,6 @@ imageName=0
   agent any
   stages 
     {
-    stage('Git Pull'){
-    steps{
-    git 'https://github.com/Bhashkaryadav1998/DevOpsCalculator.git'
-    }
-    }
     stage('Clean') {
       steps {
         sh 'mvn clean'
