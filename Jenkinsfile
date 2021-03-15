@@ -23,7 +23,7 @@ imageName
     stage('Docker build to Image'){
     steps{
     script{
-    image=docker.build "bhashkaryadav1998/devops_calculator:latest"
+    imageName=docker.build "bhashkaryadav1998/devops_calculator:latest"
     }
     }
     }
