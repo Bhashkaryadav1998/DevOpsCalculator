@@ -1,4 +1,7 @@
 pipeline {
+environment{
+image
+}
   agent any
   stages 
     {
@@ -17,5 +20,19 @@ pipeline {
         sh 'mvn test'
       }
     }
+    stage('Docker build to Image'){
+    steps{
+    script{
+    image=docker.build "bhashkaryadav1998/devops_calculator:latest"
+    }
+    }
+    }
+    stage('Push Docker Image'){
+        steps{
+        script{
+        image.push()
+        }
+        }
+        }
   }
 }
