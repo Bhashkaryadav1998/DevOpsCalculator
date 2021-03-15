@@ -1,6 +1,6 @@
 pipeline {
 environment{
-imageName
+imageName=0
 }
   agent any
   stages 
