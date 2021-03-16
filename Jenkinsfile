@@ -20,7 +20,9 @@ imageName=0
     stage('Push Docker Image'){
         steps{
         script{
+        docker.withRegistry('','docker-jenkins'){
         imageName.push()
+        }
         }
         }
         }
