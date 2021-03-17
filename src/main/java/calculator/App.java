@@ -11,7 +11,7 @@ public class App
         return Math.sqrt(x);
     }
     static long fact(int x){
-
+        if(x<0) return -1;
         long res=1;
         int i;
         for(i=1;i<=x;i++) res*=i;
