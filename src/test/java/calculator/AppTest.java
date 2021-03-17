@@ -46,4 +46,29 @@ public class AppTest
         long res=-1;
         Assert.assertEquals(res,calculator.fact(x));
     }
+    @Test
+    public void testLn1(){
+        double x=34;
+        double res=3.5263605;
+        Assert.assertEquals(res,calculator.ln(x),0.000001);
+    }
+    @Test
+    public void testln2(){
+        Assert.assertTrue(Double.isNaN(calculator.ln(-47)));
+    }
+    @Test
+    public void testPow1(){
+        double res=1024;
+        Assert.assertEquals(res,calculator.pow(2,10),0);
+    }
+    @Test
+    public void testPow2(){
+        double res=0.439104197;
+        Assert.assertEquals(res,calculator.pow(0.23,0.56),0.000001);
+    }
+    @Test
+    public void testPow3(){
+        double res=-243;
+        Assert.assertEquals(res,calculator.pow(-3,5),0);
+    }
 }

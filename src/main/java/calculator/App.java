@@ -1,14 +1,17 @@
 package calculator;
 
 import java.util.*;
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
+    static double pow(double x,double b){
+        return Math.pow(x,b);
+    }
     static double Sqrt(double x){
         return Math.sqrt(x);
+    }
+    static double ln(double x){
+        return Math.log(x);
     }
     static long fact(int x){
         if(x<0) return -1;
@@ -43,6 +46,19 @@ public class App
                     int a=scan.nextInt();
                     if(fact(a)>0) System.out.println("Factorial of "+a+" is "+fact(a));
                     else System.out.println("Factorial of "+a+" is not possible");
+                    break;
+                case 3:
+                    System.out.print("Enter a number to find Natural Log: ");
+                    double t=scan.nextDouble();
+                    System.out.println("log to base e of "+t+" is "+ln(t));
+                    break;
+                case 4:
+                    double b;
+                    System.out.print("Enter x: ");
+                    x=scan.nextDouble();
+                    System.out.print("Enter b: ");
+                    b=scan.nextDouble();
+                    System.out.println(x+" raised to power "+b+" is "+pow(x,b));
                     break;
                 default:
                     flag=false;
