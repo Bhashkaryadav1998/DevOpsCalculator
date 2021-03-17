@@ -34,4 +34,16 @@ public class AppTest
     public void testSqroot2(){
         Assert.assertTrue(Double.isNaN(calculator.Sqrt(-23)));
     }
+    @Test
+    public void testFact1(){
+        int x=5;
+        long res=120;
+        Assert.assertEquals(res,calculator.fact(x));
+    }
+    @Test
+    public void testFact2(){
+        int x=-10;
+        long res=-1;
+        Assert.assertEquals(res,calculator.fact(x));
+    }
 }
