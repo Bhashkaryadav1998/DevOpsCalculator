@@ -26,5 +26,20 @@ imageName=0
         }
         }
         }
+     stage("Rundeck Deploy"){
+     steps{
+     script {
+               step([
+                 $class: "RundeckNotifier",
+                 includeRundeckLogs: true,
+                 rundeckInstance: "Rundeck Server",
+                 jobId: "e3243332-ba83-4855-89ad-dcb25378f888",
+                 shouldWaitForRundeckJob: true,
+                 shouldFailTheBuild: true,
+                 tailLog: true
+               ])
+             }
+     }
+     }
   }
 }
